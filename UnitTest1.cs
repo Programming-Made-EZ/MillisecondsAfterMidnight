@@ -48,7 +48,7 @@ public static class Clock
     {
         private int _timeUnitAmount;
 
-        public int TimeInMilliseconds => (int)(_timeUnitAmount * TimeSpan.FromHours(_timeUnitAmount).TotalMilliseconds);
+        public int TimeInMilliseconds => (int)(TimeSpan.FromHours(_timeUnitAmount).TotalMilliseconds);
         public HoursTimeUnit(int timeUnitAmount)
         {
             _timeUnitAmount = timeUnitAmount;
@@ -58,7 +58,7 @@ public static class Clock
     {
         private int _timeUnitAmount;
 
-        public int TimeInMilliseconds => (int)(_timeUnitAmount * TimeSpan.FromMinutes(_timeUnitAmount).TotalMilliseconds);
+        public int TimeInMilliseconds => (int)(TimeSpan.FromMinutes(_timeUnitAmount).TotalMilliseconds);
         public MinutesTimeUnit(int timeUnitAmount)
         {
             _timeUnitAmount = timeUnitAmount;
@@ -68,7 +68,7 @@ public static class Clock
     {
         private int _timeUnitAmount;
 
-        public int TimeInMilliseconds => (int)(_timeUnitAmount * TimeSpan.FromSeconds(_timeUnitAmount).TotalMilliseconds);
+        public int TimeInMilliseconds => (int)(TimeSpan.FromSeconds(_timeUnitAmount).TotalMilliseconds);
         public SecondsTimeUnit(int timeUnitAmount)
         {
             _timeUnitAmount = timeUnitAmount;
